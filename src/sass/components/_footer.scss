@@ -1,0 +1,124 @@
+.footer {
+  font-family: $main-font;
+  z-index: 2;
+  bottom: 0;
+  position: relative;
+  background: rgb(248, 215, 72);
+  background: linear-gradient(0deg, rgba(248, 215, 72, 1) 50%, rgba(37, 90, 181, 1) 50%);
+  // min-width: 320px;
+  max-width: 100%;
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
+  @media screen and (min-width: 768px) {
+    height: auto;
+  }
+  &__text,
+  .text-go,
+  .text-footer,
+  .heart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #111321;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @include tablet {
+      gap: 30px;
+    }
+    @include desktop {
+      gap: 40px;
+    }
+  }
+}
+.footer-box {
+  @media screen and (max-width: 767px) {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.text-1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111321;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+}
+.logo-text1 {
+  color: #f8d748;
+}
+.donat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 21px;
+  width: 170px;
+  height: 60px;
+  margin-bottom: 5px;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: 11px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 230px;
+    height: 80px;
+    float: left;
+    margin-left: 65px;
+  }
+}
+
+.ZSU {
+  @media screen and (min-width: 768px) {
+    max-width: none;
+  }
+}
+.butt {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    max-width: none;
+  }
+}
+.heart {
+  font-size: 10px;
+
+  animation: beat 0.25s infinite alternate;
+  transform-origin: center;
+
+  @keyframes beat {
+    to {
+      transform: scale(1.4);
+    }
+  }
+  &__text--flex {
+    margin: 0;
+  }
+}

@@ -1,0 +1,130 @@
+.category {
+  display: flex;
+}
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
+  }
+}
+
+.filters__button-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filters__button {
+  max-width: 115px;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  color: #4440f7;
+  background-color: #fff;
+  border: 1px solid #4440f7;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  display: flex;
+  position: relative;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:visited {
+    background: #4440f6;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.selected_container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  @include tablet {
+    margin-left: 14px;
+  }
+}
+
+.selected_list {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 148px;
+  height: 380px;
+  visibility: hidden;
+  opacity: 1;
+  z-index: 1;
+  background: #fff;
+  border-radius: 20px;
+  transition: transform 1000ms cubic-bezier(0.16, 1, 0.5, 1);
+  position: absolute;
+  overflow-y: scroll;
+
+  scrollbar-arrow-color: #4440f7;
+  transform: translateY(-0.5rem);
+}
+
+.selected__item {
+  color: #4440f7;
+  background-color: #f8f8f8;
+  align-items: center;
+  padding-bottom: 12px;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+  display: flex;
+  background: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.shown {
+  z-index: 999;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category_svg_icon {
+  fill: #4440f7;
+
+  .filters__button:hover & {
+    fill: #ffffff;
+  }
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
+  transition: 550ms cubic-bezier(0.16, 1, 0.5, 1);  
+}

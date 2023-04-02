@@ -1,0 +1,25 @@
+.section-favorite {
+  height: 100vh;
+}
+
+.gallery {
+  & .container.gallery-container.fav {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 40px;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-top: 48px;
+      justify-content: flex-start;
+    }
+
+    @include desktop {
+      gap: 32px;
+      padding-top: 60px;
+    }
+  }
+}

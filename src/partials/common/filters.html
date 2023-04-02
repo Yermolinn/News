@@ -1,0 +1,40 @@
+<section class="filters container filters_wrap">
+  <div class="category-container">
+    <section class="category filters_wrap">
+      <div class="category_notdropdownbtn_container filters__button-wrap"></div>
+      <div class="category_dropbtn_container selected_container">
+        <button class="category_btn filters__button" id="category_btn">
+          Categories
+          <svg class="category_svg_icon" id="arrow" role="img" height="14" width="8" viewBox="0 0 56 32" aria-hidden="true"
+          focusable="false">
+          <path d="M6.58 0l-6.58 6.089 28 25.911 28-25.911-6.58-6.089-21.42 19.779-21.42-19.779z" />
+        </svg>
+        </button>
+        <div class="filters-container__list">
+          <div
+            class="category_dropdown selected_list"
+            id="category_dropdown">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--Для розмітки фільтру  -->
+  <h2 class="search-date">Search date news</h2>
+  <div class="date-container">
+    <input class="input-calendar" type="text" id="date" placeholder="" />
+    <span class="calendar-arrow">
+      <svg class="calendar-arrow__icon" width="32" height="32">
+        <use class="calendar-arrow__icon-arrow" href="/src/images/icons.svg#icon-arrow-down"></use>
+      </svg>
+    </span>
+    <span class="calendar-svg">
+      <svg class="calendar-svg__icon" width="32" height="32">
+        <use class="calendar-svg__icon-vector" href="/src/images/icons.svg#icon-calendar"></use>
+      </svg>
+    </span>
+    <div id="calendar-container" class="is-hidden">
+      <div id="calendar"></div>
+    </div>
+  </div>
+</section>
