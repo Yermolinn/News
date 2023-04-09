@@ -3,7 +3,7 @@
   &.hide {
     display: none;
   }
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@
     padding-top: 48px;
     padding-bottom: 48px;
   }
+
   @include desktop {
     // padding: 60px 0 150px;
     padding-top: 60px;
@@ -115,7 +116,8 @@
   cursor: default;
 }
 
-.pagination_list li.active, /* <-- тут важливо перебити специфічність .numb*/
+.pagination_list li.active,
+/* <-- тут важливо перебити специфічність .numb*/
 .pagination_list li:hover,
 .pagination_btn:hover {
   color: #f4f4f4;

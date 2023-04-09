@@ -7,11 +7,18 @@
   padding: 0;
   cursor: pointer;
   border: none;
+  border-radius: 50%;
   outline: none;
   background: none;
 
   @include tablet {
     display: none;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+      rgb(209, 213, 219) 0px 0px 0px 1px inset;
   }
 }
 
@@ -25,7 +32,7 @@
   width: 100vw;
   height: 100%;
   padding: 24px 16px;
-  z-index: 999;
+  z-index: 998;
   background-color: $primary-bg-color;
 
   scale: 0;
@@ -42,11 +49,13 @@
     color: #fff;
   }
 }
+
 .menu-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .menu-bar {
   display: flex;
   flex-direction: column;
@@ -64,11 +73,15 @@
   padding: 6px 0;
   padding-left: 16px;
   padding-right: 16px;
-  &:hover {
+
+  &:hover,
+  &:focus {
     background-color: $hover-bg-color;
+
     .menu-bar__icon-arrow {
       fill: $alt-border-color;
     }
+
     .menu-bar__link {
       color: $alt-border-color;
     }
@@ -79,6 +92,7 @@
   rotate: 90deg;
   fill: $hover-bg-color;
 }
+
 .menu-bar__link {
   margin-left: 14px;
   width: 100%;
@@ -97,6 +111,16 @@
   border-radius: 50%;
 }
 
+.user-mob {
+  margin-bottom: 10px;
+}
+
 .menu-toggle__icons {
   color: currentColor;
+}
+
+.auth-list-mob {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }

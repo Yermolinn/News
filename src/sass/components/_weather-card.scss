@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   max-width: 288px;
-  max-height: 469px;
+
   padding: 32px 36px;
   object-fit: contain;
   background-repeat: no-repeat;
@@ -25,8 +25,8 @@
 
   @include desktop {
     max-width: 394px;
+    // max-height: 469px;
     padding: 40px 53px 60px 53px;
-
   }
 
   &.is-hidden {
@@ -63,9 +63,9 @@
   line-height: 1.17;
 
   color: #ffffff;
+
   @include tablet {
     font-size: 36px;
-
   }
 }
 
@@ -109,6 +109,7 @@
   align-items: center;
   gap: 18px;
   max-width: 156px;
+
   @include tablet {
     max-width: 205px;
   }
@@ -120,9 +121,9 @@
   text-align: center;
 
   color: #ffffff;
-  @include tablet {
-      font-size: 36px;
 
+  @include tablet {
+    font-size: 36px;
   }
 }
 
@@ -138,6 +139,7 @@
   outline: none;
 
   color: #ffffff;
+
   @include tablet {
     font-size: 20px;
   }

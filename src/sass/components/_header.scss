@@ -1,12 +1,23 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .header-logo {
   font-family: 'Manrope', sans-serif;
+  margin-right: 30px;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.38;
   color: currentColor;
+
   @include tablet {
     font-size: 32px;
   }
+
   @include desktop {
     font-size: 42px;
     line-height: 1.36;
@@ -19,7 +30,6 @@
   padding-bottom: 24px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
   @include tablet {
     justify-content: space-between;
@@ -50,6 +60,11 @@
     font-size: 18px;
     line-height: 1.39;
   }
+
+  &:hover,
+  &:focus {
+    color: gray;
+  }
 }
 
 .change-theme {
@@ -73,6 +88,7 @@
     width: 288px;
   }
 }
+
 #search-form {
   position: absolute;
   top: 0;
@@ -84,16 +100,20 @@
   justify-content: center;
   align-items: center;
   background: none;
-  &:hover > .search-input {
+
+  &:hover>.search-input {
     // transform:  translateX(0%);
     scale: 1;
   }
-  &:hover > .query-btn {
+
+  &:hover>.query-btn {
     transform: translateX(-60px);
+
     // left: 20px;
     @include tablet {
       transform: translateX(-80px);
     }
+
     @include desktop {
       transform: translateX(-110px);
     }
@@ -113,7 +133,9 @@
   align-items: center;
   cursor: pointer;
   transition: 0.4s;
-  transform: translateX(350%);
+  // transform: translateX(350%);
+  transform: translateX(-60px);
+
   transition: transform $duration $cubic;
 
   @include tablet {
@@ -139,7 +161,7 @@
   transition: 0.4s;
   width: 100%;
   padding: 5px 5px 5px 48px;
-  scale: 0;
+  // scale: 0;
   transition: scale $duration $cubic;
 
   font-family: 'Poppins', sans-serif;
@@ -148,18 +170,20 @@
   letter-spacing: 0.02em;
   color: $primary-text-color;
   opacity: 0.4;
-  &:focus {
-    scale: 1;
-  }
-  &:focus + .query-btn {
-    transform: translateX(-60px);
-      @include tablet {
-        transform: translateX(-80px);
-      }
 
-      @include desktop {
-        transform: translateX(-110px);
-      }
+  // &:focus {
+  //   scale: 1;
+  // }
+  &:focus+.query-btn {
+
+    // transform: translateX(-60px);
+    @include tablet {
+      transform: translateX(-80px);
+    }
+
+    @include desktop {
+      transform: translateX(-110px);
+    }
   }
 
   @include tablet {
@@ -187,5 +211,67 @@
     border-radius: 2px;
 
     background-color: $secondary-text-color;
+  }
+}
+
+.right-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.user-tab-pc {
+  text-align: center;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.auth-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  display: flex;
+  gap: 10px;
+}
+
+.auth-btn {
+  max-width: 115px;
+
+  width: 80px;
+  height: fit-content;
+  cursor: pointer;
+  color: #4440f7;
+  background-color: #fff;
+  border: 1px solid #4440f7;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  position: relative;
+
+  &:not([disabled]):focus,
+  &:not([disabled]):hover {
+    color: #fff;
+    background: #4440f6;
+    box-shadow: 0 4px 4px #00000040;
+  }
+
+  &:disabled {
+    background-color: grey;
+    color: #fff;
   }
 }

@@ -9,11 +9,18 @@
   padding-bottom: 60px;
 
   @include tablet {
-    padding-top: 40px;
+    &.read {
+      padding-top: 40px;
+    }
+
     padding-bottom: 101px;
   }
+
   @include desktop {
-    padding-top: 61px;
+    &.read {
+      padding-top: 61px;
+    }
+
     padding-bottom: 226px;
   }
 
@@ -21,6 +28,7 @@
     display: none;
   }
 }
+
 .empty-page__title {
   max-width: 276px;
   font-family: 'Manrope', sans-serif;
@@ -31,6 +39,7 @@
   letter-spacing: -0.01em;
 
   color: currentColor;
+
   @include tablet {
     max-width: 548px;
     font-size: 40px;

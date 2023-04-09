@@ -3,7 +3,7 @@ import {
   showModal,
   hideModal,
   addClassesForCoincidencesMarkupAndStoragePages,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 
 const formEl = document.getElementById('search-form');
 const galleryEl = document.querySelector('.gallery-container');

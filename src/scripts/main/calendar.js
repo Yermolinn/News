@@ -1,8 +1,8 @@
 import VanillaCalendar from '@uvarov.frontend/vanilla-calendar';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 
-import { spinner } from './libraries';
-import { fetchNews } from './fetchNews';
+import { spinner } from '../common/libraries';
+import { fetchNews } from '../common/fetchNews';
 import {
   renderNewsCards,
   deleteNewsCards,
@@ -10,7 +10,7 @@ import {
   addClassesForCoincidencesMarkupAndStorage,
   mainPageHideModal,
   mainPageShowModal,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 import { paginationByQuery, deletePagination } from './pagination';
 
 const calendar = new VanillaCalendar('#calendar');

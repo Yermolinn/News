@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '6NeZFvbRUjOlM3jxAALEHJAyoskEi5UY';
+const API_KEY = 'HR9YxGV98GGTmMcKHA5eY4Aer5nJgRvJ';
 const POPULAR_URL = 'https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json';
 const SEARCH_URL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const FILTER_URL = 'https://api.nytimes.com/svc/news/v3/content/inyt/';

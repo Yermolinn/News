@@ -1,9 +1,9 @@
 import {
   getStorageList,
   addClassesForCoincidencesMarkupAndStoragePages,
-} from './commonFunctions'; // імпорт  функції для взяття  данних з сториджу
+} from '../common/commonFunctions'; // імпорт  функції для взяття  данних з сториджу
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import { spinner } from './libraries';
+import { spinner } from '../common/libraries';
 
 // gallery-container - додатковий класс на контейнер в якому малюється розмітка
 const gallery = document.querySelector('.gallery-container');

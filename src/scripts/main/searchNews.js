@@ -1,4 +1,4 @@
-import { fetchNews } from './fetchNews';
+import { fetchNews } from '../common/fetchNews';
 import {
   cutInfo,
   createObj,
@@ -6,9 +6,9 @@ import {
   addClassesForCoincidencesMarkupAndStorage,
   mainPageShowModal,
   mainPageHideModal,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 import { paginationByQuery, deletePagination } from './pagination';
-import { spinner } from './libraries';
+import { spinner } from '../common/libraries';
 import { Report } from 'notiflix/build/notiflix-report-aio'; //бібліотека сповіщень
 
 const inputField = document.querySelector('.search-input');

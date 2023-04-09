@@ -1,10 +1,10 @@
-import { fetchNews } from './fetchNews';
-import { spinner } from './libraries';
+import { fetchNews } from '../common/fetchNews';
+import { spinner } from '../common/libraries';
 import {
   renderNewsCards,
   savePopularData,
   addClassesForCoincidencesMarkupAndStorage,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 import { paginationByQuery } from './pagination';
 
 onLoad();

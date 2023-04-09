@@ -1,10 +1,10 @@
-import { fetchNews } from './fetchNews';
+import { fetchNews } from '../common/fetchNews';
 import {
   saveSearchData,
   addClassesForCoincidencesMarkupAndStorage,
   renderNewsCards,
   deleteNewsCards,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 
 const gallery = document.querySelector('.gallery-container');
 const prevCon = document.querySelector('.prev_container');

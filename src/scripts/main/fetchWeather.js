@@ -18,17 +18,17 @@ export default class WeatherApiService {
     }
     
   }
-  async loadWeatherWeek() {
+  // async loadWeatherWeek() {
 
-    if(this.lat == undefined || this.lon == undefined) {
-      // const url = `https://openweathermap.org/data/2.5/onecall?lat=50.4333&lon=30.5167&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`;;
-    } else {
-      const url = `https://openweathermap.org/data/2.5/onecall?lat=${this.lat}&lon=${this.lon}&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`;
+  //   if(this.lat == undefined || this.lon == undefined) {
+  //     // const url = `https://openweathermap.org/data/2.5/onecall?lat=50.4333&lon=30.5167&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`;;
+  //   } else {
+  //     const url = `https://openweathermap.org/data/2.5/onecall?lat=${this.lat}&lon=${this.lon}&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`;
     
-      const response = await axios.get(url);
+  //     const response = await axios.get(url);
   
-      return response;
-    }
+  //     return response;
+  //   }
 
-  }
+  // }
 }

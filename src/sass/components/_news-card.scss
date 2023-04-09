@@ -15,7 +15,14 @@
   @include desktop {
     max-width: 394px;
   }
+
+  transition: transform 400ms linear;
+
+  &.scale {
+    transform: scale(0) rotate(360deg);
+  }
 }
+
 .news-card__img {
   position: relative;
 }
@@ -57,6 +64,7 @@
   letter-spacing: -0.01em;
 
   color: currentColor;
+
   @include tablet {
     font-size: 32px;
   }
@@ -91,7 +99,13 @@
   line-height: 1.38;
 
   color: $secondary-text-color;
+
+  &:hover,
+  &:focus {
+    color: gray;
+  }
 }
+
 .label-favorite {
   position: relative;
   display: flex;
@@ -113,8 +127,8 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 
-  &:checked + .label-favorite__box,
-  &:checked + .label-favorite__box .label-favorite__box-icon {
+  &:checked+.label-favorite__box,
+  &:checked+.label-favorite__box .label-favorite__box-icon {
     border-color: transparent;
     scale: 1;
   }
@@ -215,6 +229,12 @@
   color: $primary-text-color;
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+      rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  }
 }
 
 .label-favorite::before {

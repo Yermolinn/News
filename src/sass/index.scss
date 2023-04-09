@@ -14,7 +14,9 @@
 @import './components/header';
 @import './components/theme';
 @import './components/mobile-menu';
+@import './components/auth-menu';
 @import './components/not-found-message';
+
 @import './components/calendar';
 @import './components/news-card';
 @import './components/weather-card';
@@ -26,3 +28,4 @@
 @import './pages/favorite/favorite';
 @import './pages/read/read';
 @import './components/footer';
+@import './components/reg-form';

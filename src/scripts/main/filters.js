@@ -1,4 +1,4 @@
-import { fetchNews } from './fetchNews';
+import { fetchNews } from '../common/fetchNews';
 import {
   saveCategoryData,
   renderNewsCards,
@@ -6,9 +6,9 @@ import {
   addClassesForCoincidencesMarkupAndStorage,
   mainPageHideModal,
   mainPageShowModal,
-} from './commonFunctions';
+} from '../common/commonFunctions';
 
-import { spinner } from './libraries';
+import { spinner } from '../common/libraries';
 import { paginationByQuery, deletePagination } from './pagination';
 
 const filterBtnsWrap = document.querySelector('.filters__button-wrap');

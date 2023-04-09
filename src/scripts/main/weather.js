@@ -1,5 +1,5 @@
 import WeatherApiService from './fetchWeather';
-import { spinner } from './libraries';
+import { spinner } from '../common/libraries';
 
 const weatherCardEl = document.querySelector('.weather-card');
 
